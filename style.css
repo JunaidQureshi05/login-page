@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: wheat;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.form-container {
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.form-container input[type='text'],
+.form-container input[type='password'] {
+  display: block;
+  border: none;
+  background: inherit;
+  border-bottom: 1px solid black;
+  height: 50px;
+  width: 250px;
+  font-size: 18px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.buttons,
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form button {
+  color: white;
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: purple;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form a,
+h3 {
+  text-decoration: none;
+  color: black;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-30px);
+}
+
+.overlay {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: purple;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+button:active .overlay {
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+form a {
+  border: 3px solid purple;
+  padding: 0.5rem 0.5rem;
+}
